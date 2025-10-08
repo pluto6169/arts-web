@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعضاء هيئة التدريس - كلية الآداب - جامعة القاهرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20 2 3567 6000</span>
+                        <span><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</span>
+                    </div>
+                    <div class="header-links">
+                        <a href="#" class="btn-login"><i class="fas fa-user"></i> تسجيل الدخول</a>
+                        <button class="lang-switch">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="../images/logo.png" alt="كلية الآداب">
+                        <div class="logo-text">
+                            <h1>كلية الآداب</h1>
+                            <p>جامعة القاهرة</p>
+                        </div>
+                    </div>
+
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li><a href="../index.html">الرئيسية</a></li>
+                            <li class="dropdown">
+                                <a href="#">عن الكلية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="vision.html">الرؤية والرسالة</a></li>
+                                    <li><a href="management.html">إدارة الكلية</a></li>
+                                    <li><a href="quality.html">الجودة والاعتماد</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="active">الأقسام العلمية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="departments.html">جميع الأقسام</a></li>
+                                    <li><a href="staff.html">أعضاء هيئة التدريس</a></li>
+                                    <li><a href="courses.html">توصيف المقررات</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li class="dropdown">
+                                <a href="#">الطلاب <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">الجداول الدراسية</a></li>
+                                    <li><a href="#">نتائج الامتحانات</a></li>
+                                    <li><a href="youth.html">رعاية الشباب</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="community.html">خدمة المجتمع</a></li>
+                            <li><a href="news.html">الأخبار</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                        <button class="mobile-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>أعضاء هيئة التدريس</h1>
+                <nav class="breadcrumb">
+                    <a href="../index.html">الرئيسية</a>
+                    <span>/</span>
+                    <a href="departments.html">الأقسام العلمية</a>
+                    <span>/</span>
+                    <span>أعضاء هيئة التدريس</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="staff-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>أعضاء هيئة التدريس</h2>
+                <p>تعرف على نخبة من أعضاء هيئة التدريس بالكلية في مختلف التخصصات</p>
+            </div>
+
+            <!-- Department Filter -->
+            <div class="department-filter">
+                <div class="filter-header">
+                    <h3>تصفية حسب القسم</h3>
+                </div>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-department="all">جميع الأقسام</button>
+                    <button class="filter-btn" data-department="arabic">اللغة العربية</button>
+                    <button class="filter-btn" data-department="english">اللغة الإنجليزية</button>
+                    <button class="filter-btn" data-department="french">اللغة الفرنسية</button>
+                    <button class="filter-btn" data-department="history">التاريخ</button>
+                    <button class="filter-btn" data-department="geography">الجغرافيا</button>
+                </div>
+            </div>
+
+            <!-- Staff Grid -->
+            <div class="staff-grid">
+                <div class="staff-card" data-department="arabic">
+                    <div class="staff-image">
+                        <img src="../images/staff1.jpg" alt="أ.د. أحمد محمد">
+                    </div>
+                    <div class="staff-info">
+                        <h3>أ.د. أحمد محمد علي</h3>
+                        <p class="position">أستاذ النحو والصرف</p>
+                        <p class="department">قسم اللغة العربية</p>
+                        <div class="staff-meta">
+                            <span><i class="fas fa-envelope"></i> ahmed.mohamed@arts.cu.edu.eg</span>
+                            <span><i class="fas fa-phone"></i> 35676101</span>
+                        </div>
+                        <div class="staff-actions">
+                            <a href="#" class="btn-link">السيرة الذاتية</a>
+                            <a href="#" class="btn-link">المقررات</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="staff-card" data-department="english">
+                    <div class="staff-image">
+                        <img src="../images/staff2.jpg" alt="أ.د. سارة محمود">
+                    </div>
+                    <div class="staff-info">
+                        <h3>أ.د. سارة محمود أحمد</h3>
+                        <p class="position">أستاذ الأدب الإنجليزي</p>
+                        <p class="department">قسم اللغة الإنجليزية</p>
+                        <div class="staff-meta">
+                            <span><i class="fas fa-envelope"></i> sara.mahmoud@arts.cu.edu.eg</span>
+                            <span><i class="fas fa-phone"></i> 35676102</span>
+                        </div>
+                        <div class="staff-actions">
+                            <a href="#" class="btn-link">السيرة الذاتية</a>
+                            <a href="#" class="btn-link">المقررات</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="staff-card" data-department="french">
+                    <div class="staff-image">
+                        <img src="../images/staff3.jpg" alt="د. محمد عبد الرحمن">
+                    </div>
+                    <div class="staff-info">
+                        <h3>د. محمد عبد الرحمن</h3>
+                        <p class="position">أستاذ مساعد الترجمة</p>
+                        <p class="department">قسم اللغة الفرنسية</p>
+                        <div class="staff-meta">
+                            <span><i class="fas fa-envelope"></i> mohamed.abdelrahman@arts.cu.edu.eg</span>
+                            <span><i class="fas fa-phone"></i> 35676103</span>
+                        </div>
+                        <div class="staff-actions">
+                            <a href="#" class="btn-link">السيرة الذاتية</a>
+                            <a href="#" class="btn-link">المقررات</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="staff-card" data-department="history">
+                    <div class="staff-image">
+                        <img src="../images/staff4.jpg" alt="أ.د. فاطمة الزهراء">
+                    </div>
+                    <div class="staff-info">
+                        <h3>أ.د. فاطمة الزهراء إبراهيم</h3>
+                        <p class="position">أستاذ التاريخ الإسلامي</p>
+                        <p class="department">قسم التاريخ</p>
+                        <div class="staff-meta">
+                            <span><i class="fas fa-envelope"></i> fatima.alzahra@arts.cu.edu.eg</span>
+                            <span><i class="fas fa-phone"></i> 35676104</span>
+                        </div>
+                        <div class="staff-actions">
+                            <a href="#" class="btn-link">السيرة الذاتية</a>
+                            <a href="#" class="btn-link">المقررات</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="staff-card" data-department="geography">
+                    <div class="staff-image">
+                        <img src="../images/staff5.jpg" alt="د. خالد مصطفى">
+                    </div>
+                    <div class="staff-info">
+                        <h3>د. خالد مصطفى حسين</h3>
+                        <p class="position">أستاذ مساعد نظم المعلومات الجغرافية</p>
+                        <p class="department">قسم الجغرافيا</p>
+                        <div class="staff-meta">
+                            <span><i class="fas fa-envelope"></i> khaled.mostafa@arts.cu.edu.eg</span>
+                            <span><i class="fas fa-phone"></i> 35676105</span>
+                        </div>
+                        <div class="staff-actions">
+                            <a href="#" class="btn-link">السيرة الذاتية</a>
+                            <a href="#" class="btn-link">المقررات</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="staff-card" data-department="arabic">
+                    <div class="staff-image">
+                        <img src="../images/staff6.jpg" alt="د. منى السيد">
+                    </div>
+                    <div class="staff-info">
+                        <h3>د. منى السيد عمر</h3>
+                        <p class="position">أستاذ مساعد البلاغة والنقد</p>
+                        <p class="department">قسم اللغة العربية</p>
+                        <div class="staff-meta">
+                            <span><i class="fas fa-envelope"></i> mona.elsayed@arts.cu.edu.eg</span>
+                            <span><i class="fas fa-phone"></i> 35676106</span>
+                        </div>
+                        <div class="staff-actions">
+                            <a href="#" class="btn-link">السيرة الذاتية</a>
+                            <a href="#" class="btn-link">المقررات</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-btn disabled"><i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن الكلية</h3>
+                        <p>كلية الآداب جامعة القاهرة، منارة العلم والثقافة منذ عام 1908، تقدم برامج أكاديمية متميزة في
+                            العلوم الإنسانية والاجتماعية.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="vision.html">الرؤية والرسالة</a></li>
+                            <li><a href="departments.html">الأقسام العلمية</a></li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li><a href="quality.html">الجودة والاعتماد</a></li>
+                            <li><a href="green-office.html">المكتب الأخضر</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>خدمات الطلاب</h3>
+                        <ul>
+                            <li><a href="#">الجداول الدراسية</a></li>
+                            <li><a href="#">نتائج الامتحانات</a></li>
+                            <li><a href="youth.html">رعاية الشباب</a></li>
+                            <li><a href="#">المكتبة الرقمية</a></li>
+                            <li><a href="#">البريد الإلكتروني</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> شارع الجامعة، الجيزة، مصر</li>
+                            <li><i class="fas fa-phone"></i> +20 2 3567 6000</li>
+                            <li><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</li>
+                            <li><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 17:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 كلية الآداب - جامعة القاهرة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="main.js"></script>
+    <script src="staff.js"></script>
+</body>
+
+</html>

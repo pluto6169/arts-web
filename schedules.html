@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجداول الدراسية - كلية الآداب - جامعة القاهرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20 2 3567 6000</span>
+                        <span><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</span>
+                    </div>
+                    <div class="header-links">
+                        <a href="#" class="btn-login"><i class="fas fa-user"></i> تسجيل الدخول</a>
+                        <button class="lang-switch">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="كلية الآداب">
+                        <div class="logo-text">
+                            <h1>كلية الآداب</h1>
+                            <p>جامعة القاهرة</p>
+                        </div>
+                    </div>
+
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li class="dropdown">
+                                <a href="#">عن الكلية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="vision.html">الرؤية والرسالة</a></li>
+                                    <li><a href="management.html">إدارة الكلية</a></li>
+                                    <li><a href="quality.html">الجودة والاعتماد</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">الأقسام العلمية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="departments.html">جميع الأقسام</a></li>
+                                    <li><a href="staff.html">أعضاء هيئة التدريس</a></li>
+                                    <li><a href="courses.html">توصيف المقررات</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="active">الطلاب <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="schedules.html" class="active">الجداول الدراسية</a></li>
+                                    <li><a href="results.html">نتائج الامتحانات</a></li>
+                                    <li><a href="youth.html">رعاية الشباب</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="community.html">خدمة المجتمع</a></li>
+                            <li><a href="news.html">الأخبار</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                        <button class="mobile-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>الجداول الدراسية</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span> / </span>
+                    <a href="#">الطلاب</a>
+                    <span> / </span>
+                    <span class="active">الجداول الدراسية</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedules Section -->
+    <section class="schedules-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>الجداول الدراسية للفصل الدراسي الأول 2025/2026</h2>
+                <p>يمكنك الاطلاع على الجداول الدراسية لجميع الأقسام والمراحل الدراسية</p>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="department">القسم العلمي:</label>
+                    <select id="department">
+                        <option value="">جميع الأقسام</option>
+                        <option value="arabic">اللغة العربية</option>
+                        <option value="english">اللغة الإنجليزية</option>
+                        <option value="history">التاريخ</option>
+                        <option value="geography">الجغرافيا</option>
+                        <option value="philosophy">الفلسفة</option>
+                        <option value="sociology">علم الاجتماع</option>
+                        <option value="psychology">علم النفس</option>
+                        <option value="archaeology">الآثار</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="level">المرحلة الدراسية:</label>
+                    <select id="level">
+                        <option value="">جميع المراحل</option>
+                        <option value="1">الفرقة الأولى</option>
+                        <option value="2">الفرقة الثانية</option>
+                        <option value="3">الفرقة الثالثة</option>
+                        <option value="4">الفرقة الرابعة</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary">عرض الجداول</button>
+            </div>
+
+            <div class="schedules-container">
+                <div class="schedule-card">
+                    <div class="schedule-header">
+                        <h3>قسم اللغة العربية - الفرقة الأولى</h3>
+                        <span class="schedule-badge">محدث</span>
+                    </div>
+                    <div class="schedule-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>اليوم</th>
+                                    <th>المادة</th>
+                                    <th>المحاضر</th>
+                                    <th>القاعة</th>
+                                    <th>الوقت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>الأحد</td>
+                                    <td>النحو والصرف</td>
+                                    <td>أ.د. أحمد محمد</td>
+                                    <td>قاعة 101</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                                <tr>
+                                    <td>الأحد</td>
+                                    <td>الأدب الجاهلي</td>
+                                    <td>أ.د. سعاد محمود</td>
+                                    <td>قاعة 102</td>
+                                    <td>11:30 - 1:30</td>
+                                </tr>
+                                <tr>
+                                    <td>الإثنين</td>
+                                    <td>علم اللغة</td>
+                                    <td>د. محمد علي</td>
+                                    <td>قاعة 201</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                                <tr>
+                                    <td>الإثنين</td>
+                                    <td>النقد الأدبي</td>
+                                    <td>د. هدى أحمد</td>
+                                    <td>قاعة 202</td>
+                                    <td>11:30 - 1:30</td>
+                                </tr>
+                                <tr>
+                                    <td>الثلاثاء</td>
+                                    <td>الصرف</td>
+                                    <td>أ.د. أحمد محمد</td>
+                                    <td>قاعة 101</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="schedule-actions">
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> طباعة الجدول</a>
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> تحميل PDF</a>
+                    </div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-header">
+                        <h3>قسم اللغة الإنجليزية - الفرقة الأولى</h3>
+                        <span class="schedule-badge">محدث</span>
+                    </div>
+                    <div class="schedule-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>اليوم</th>
+                                    <th>المادة</th>
+                                    <th>المحاضر</th>
+                                    <th>القاعة</th>
+                                    <th>الوقت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>الأحد</td>
+                                    <td>English Grammar</td>
+                                    <td>Dr. John Smith</td>
+                                    <td>Hall 301</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                                <tr>
+                                    <td>الأحد</td>
+                                    <td>English Literature</td>
+                                    <td>Dr. Sarah Johnson</td>
+                                    <td>Hall 302</td>
+                                    <td>11:30 - 1:30</td>
+                                </tr>
+                                <tr>
+                                    <td>الإثنين</td>
+                                    <td>Linguistics</td>
+                                    <td>Dr. Robert Brown</td>
+                                    <td>Hall 301</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                                <tr>
+                                    <td>الإثنين</td>
+                                    <td>Writing Skills</td>
+                                    <td>Dr. Emily Davis</td>
+                                    <td>Hall 303</td>
+                                    <td>11:30 - 1:30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="schedule-actions">
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> طباعة الجدول</a>
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> تحميل PDF</a>
+                    </div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-header">
+                        <h3>قسم التاريخ - الفرقة الأولى</h3>
+                    </div>
+                    <div class="schedule-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>اليوم</th>
+                                    <th>المادة</th>
+                                    <th>المحاضر</th>
+                                    <th>القاعة</th>
+                                    <th>الوقت</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>الأحد</td>
+                                    <td>تاريخ مصر القديم</td>
+                                    <td>أ.د. محمود عبد الرحمن</td>
+                                    <td>قاعة 401</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                                <tr>
+                                    <td>الأحد</td>
+                                    <td>تاريخ اليونان والرومان</td>
+                                    <td>د. سامية أحمد</td>
+                                    <td>قاعة 402</td>
+                                    <td>11:30 - 1:30</td>
+                                </tr>
+                                <tr>
+                                    <td>الإثنين</td>
+                                    <td>مناهج البحث التاريخي</td>
+                                    <td>أ.د. خالد إبراهيم</td>
+                                    <td>قاعة 401</td>
+                                    <td>9:00 - 11:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="schedule-actions">
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> طباعة الجدول</a>
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> تحميل PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">التالي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن الكلية</h3>
+                        <p>كلية الآداب جامعة القاهرة، منارة العلم والثقافة منذ عام 1908، تقدم برامج أكاديمية متميزة في
+                            العلوم الإنسانية والاجتماعية.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="vision.html">الرؤية والرسالة</a></li>
+                            <li><a href="departments.html">الأقسام العلمية</a></li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li><a href="quality.html">الجودة والاعتماد</a></li>
+                            <li><a href="green-office.html">المكتب الأخضر</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>خدمات الطلاب</h3>
+                        <ul>
+                            <li><a href="schedules.html">الجداول الدراسية</a></li>
+                            <li><a href="results.html">نتائج الامتحانات</a></li>
+                            <li><a href="youth.html">رعاية الشباب</a></li>
+                            <li><a href="#">المكتبة الرقمية</a></li>
+                            <li><a href="#">البريد الإلكتروني</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> شارع الجامعة، الجيزة، مصر</li>
+                            <li><i class="fas fa-phone"></i> +20 2 3567 6000</li>
+                            <li><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</li>
+                            <li><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 17:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 كلية الآداب - جامعة القاهرة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
