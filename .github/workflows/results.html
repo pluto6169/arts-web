@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتائج الامتحانات - كلية الآداب - جامعة القاهرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20 2 3567 6000</span>
+                        <span><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</span>
+                    </div>
+                    <div class="header-links">
+                        <a href="#" class="btn-login"><i class="fas fa-user"></i> تسجيل الدخول</a>
+                        <button class="lang-switch">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="كلية الآداب">
+                        <div class="logo-text">
+                            <h1>كلية الآداب</h1>
+                            <p>جامعة القاهرة</p>
+                        </div>
+                    </div>
+
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li class="dropdown">
+                                <a href="#">عن الكلية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="vision.html">الرؤية والرسالة</a></li>
+                                    <li><a href="management.html">إدارة الكلية</a></li>
+                                    <li><a href="quality.html">الجودة والاعتماد</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">الأقسام العلمية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="departments.html">جميع الأقسام</a></li>
+                                    <li><a href="staff.html">أعضاء هيئة التدريس</a></li>
+                                    <li><a href="courses.html">توصيف المقررات</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="active">الطلاب <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="schedules.html">الجداول الدراسية</a></li>
+                                    <li><a href="results.html" class="active">نتائج الامتحانات</a></li>
+                                    <li><a href="youth.html">رعاية الشباب</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="community.html">خدمة المجتمع</a></li>
+                            <li><a href="news.html">الأخبار</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                        <button class="mobile-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>نتائج الامتحانات</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span> / </span>
+                    <a href="#">الطلاب</a>
+                    <span> / </span>
+                    <span class="active">نتائج الامتحانات</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>الاستعلام عن نتائج الامتحانات</h2>
+                <p>يمكنك الاستعلام عن نتائج الامتحانات للفصل الدراسي الأول 2025/2026</p>
+            </div>
+
+            <div class="results-search">
+                <div class="search-form">
+                    <div class="form-group">
+                        <label for="student-id">الرقم الجامعي:</label>
+                        <input type="text" id="student-id" placeholder="أدخل الرقم الجامعي">
+                    </div>
+                    <div class="form-group">
+                        <label for="national-id">الرقم القومي:</label>
+                        <input type="text" id="national-id" placeholder="أدخل الرقم القومي">
+                    </div>
+                    <div class="form-group">
+                        <label for="exam-term">الفصل الدراسي:</label>
+                        <select id="exam-term">
+                            <option value="">اختر الفصل الدراسي</option>
+                            <option value="1">الفصل الدراسي الأول 2025/2026</option>
+                            <option value="2">الفصل الدراسي الثاني 2024/2025</option>
+                            <option value="3">الفصل الصيفي 2024/2025</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">استعلام</button>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="student-info">
+                    <h3>معلومات الطالب</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">الاسم:</span>
+                            <span class="info-value">محمد أحمد محمود</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">الرقم الجامعي:</span>
+                            <span class="info-value">2025001234</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">القسم:</span>
+                            <span class="info-value">اللغة العربية</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">الفرقة:</span>
+                            <span class="info-value">الأولى</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">الفصل الدراسي:</span>
+                            <span class="info-value">الأول 2025/2026</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">المعدل التراكمي:</span>
+                            <span class="info-value highlight">3.75 / 4.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-table">
+                    <h3>النتائج التفصيلية</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المادة</th>
+                                <th>الدرجة</th>
+                                <th>التقدير</th>
+                                <th>النقاط</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>النحو والصرف</td>
+                                <td>95</td>
+                                <td>ممتاز</td>
+                                <td>4.00</td>
+                                <td><span class="status passed">ناجح</span></td>
+                            </tr>
+                            <tr>
+                                <td>الأدب الجاهلي</td>
+                                <td>88</td>
+                                <td>جيد جداً</td>
+                                <td>3.75</td>
+                                <td><span class="status passed">ناجح</span></td>
+                            </tr>
+                            <tr>
+                                <td>علم اللغة</td>
+                                <td>92</td>
+                                <td>ممتاز</td>
+                                <td>4.00</td>
+                                <td><span class="status passed">ناجح</span></td>
+                            </tr>
+                            <tr>
+                                <td>النقد الأدبي</td>
+                                <td>85</td>
+                                <td>جيد جداً</td>
+                                <td>3.50</td>
+                                <td><span class="status passed">ناجح</span></td>
+                            </tr>
+                            <tr>
+                                <td>الصرف</td>
+                                <td>90</td>
+                                <td>ممتاز</td>
+                                <td>4.00</td>
+                                <td><span class="status passed">ناجح</span></td>
+                            </tr>
+                            <tr>
+                                <td>البلاغة</td>
+                                <td>78</td>
+                                <td>جيد</td>
+                                <td>3.00</td>
+                                <td><span class="status passed">ناجح</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="results-summary">
+                    <div class="summary-card">
+                        <h4>ملخص النتائج</h4>
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <span class="summary-label">المعدل الفصلي:</span>
+                                <span class="summary-value">3.71</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">إجمالي الساعات:</span>
+                                <span class="summary-value">18</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">الساعات المنجزة:</span>
+                                <span class="summary-value">18</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">النقاط المكتسبة:</span>
+                                <span class="summary-value">66.75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> طباعة النتيجة</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> تحميل PDF</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-share"></i> مشاركة النتيجة</a>
+            </div>
+
+            <div class="results-notice">
+                <div class="notice-card">
+                    <h4><i class="fas fa-info-circle"></i> ملاحظات هامة</h4>
+                    <ul>
+                        <li>النتائج المعروضة هي نتائج أولية وقابلة للتعديل.</li>
+                        <li>في حالة وجود أي استفسار حول النتائج، يرجى التوجه إلى شئون الطلاب.</li>
+                        <li>مواعيد الاعتراض على النتائج: من 15/10/2025 إلى 25/10/2025.</li>
+                        <li>لن يتم النظر في أي اعتراض بعد الموعد المحدد.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن الكلية</h3>
+                        <p>كلية الآداب جامعة القاهرة، منارة العلم والثقافة منذ عام 1908، تقدم برامج أكاديمية متميزة في
+                            العلوم الإنسانية والاجتماعية.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="vision.html">الرؤية والرسالة</a></li>
+                            <li><a href="departments.html">الأقسام العلمية</a></li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li><a href="quality.html">الجودة والاعتماد</a></li>
+                            <li><a href="green-office.html">المكتب الأخضر</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>خدمات الطلاب</h3>
+                        <ul>
+                            <li><a href="schedules.html">الجداول الدراسية</a></li>
+                            <li><a href="results.html">نتائج الامتحانات</a></li>
+                            <li><a href="youth.html">رعاية الشباب</a></li>
+                            <li><a href="#">المكتبة الرقمية</a></li>
+                            <li><a href="#">البريد الإلكتروني</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> شارع الجامعة، الجيزة، مصر</li>
+                            <li><i class="fas fa-phone"></i> +20 2 3567 6000</li>
+                            <li><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</li>
+                            <li><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 17:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 كلية الآداب - جامعة القاهرة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

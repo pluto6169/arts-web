@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - كلية الآداب - جامعة القاهرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .login-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .login-header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .login-header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .login-header p {
+            margin: 10px 0 0;
+            opacity: 0.8;
+        }
+
+        .login-content {
+            display: flex;
+            min-height: 500px;
+        }
+
+        .login-form-container {
+            flex: 1;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .login-switcher {
+            flex: 0 0 200px;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            border-left: 1px solid #e9ecef;
+        }
+
+        .switch-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            color: #6c757d;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .switch-btn.active {
+            background: #2c3e50;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .switch-btn i {
+            font-size: 24px;
+        }
+
+        .form-title {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #2c3e50;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+        }
+
+        .password-input {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6c757d;
+            cursor: pointer;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .forgot-password {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login-submit {
+            width: 100%;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login-submit:hover {
+            background: #1a252f;
+            transform: translateY(-2px);
+        }
+
+        .login-divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .login-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+        }
+
+        .login-divider span {
+            background: white;
+            padding: 0 15px;
+            color: #6c757d;
+        }
+
+        .social-login {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn-social {
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            background: white;
+            color: #495057;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-social:hover {
+            border-color: #2c3e50;
+            transform: translateY(-2px);
+        }
+
+        .form-footer {
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .form-footer a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Animation for form switch */
+        .login-form {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .login-form.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .login-content {
+                flex-direction: column;
+            }
+
+            .login-switcher {
+                flex-direction: row;
+                padding: 20px;
+                border-left: none;
+                border-top: 1px solid #e9ecef;
+            }
+
+            .switch-btn {
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20 2 3567 6000</span>
+                        <span><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</span>
+                    </div>
+                    <div class="header-links">
+                        <a href="login.html" class="btn-login active"><i class="fas fa-user"></i> تسجيل الدخول</a>
+                        <button class="lang-switch">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="كلية الآداب">
+                        <div class="logo-text">
+                            <h1>كلية الآداب</h1>
+                            <p>جامعة القاهرة</p>
+                        </div>
+                    </div>
+
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li class="dropdown">
+                                <a href="#">عن الكلية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="vision.html">الرؤية والرسالة</a></li>
+                                    <li><a href="management.html">إدارة الكلية</a></li>
+                                    <li><a href="quality.html">الجودة والاعتماد</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">الأقسام العلمية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="departments.html">جميع الأقسام</a></li>
+                                    <li><a href="staff.html">أعضاء هيئة التدريس</a></li>
+                                    <li><a href="courses.html">توصيف المقررات</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li class="dropdown">
+                                <a href="#">الطلاب <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="schedules.html">الجداول الدراسية</a></li>
+                                    <li><a href="results.html">نتائج الامتحانات</a></li>
+                                    <li><a href="youth.html">رعاية الشباب</a></li>
+                                    <li><a href="digital-library.html">المكتبة الرقمية</a></li>
+                                    <li><a href="email.html">البريد الإلكتروني</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="community.html">خدمة المجتمع</a></li>
+                            <li><a href="news.html">الأخبار</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                        <button class="mobile-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-header">
+                    <h1>مرحباً بك في بوابة كلية الآداب</h1>
+                    <p>منصة الطلاب والأعضاء للوصول إلى الخدمات الأكاديمية</p>
+                </div>
+
+                <div class="login-content">
+                    <!-- Login Forms Container -->
+                    <div class="login-form-container">
+                        <!-- Existing Member Login Form -->
+                        <form class="login-form active" id="existingMemberForm">
+                            <h2 class="form-title">تسجيل الدخول للعضو الحالي</h2>
+
+                            <div class="form-group">
+                                <label for="username">اسم المستخدم أو البريد الإلكتروني</label>
+                                <input type="text" class="form-control" id="username"
+                                    placeholder="أدخل اسم المستخدم أو البريد الإلكتروني" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">كلمة المرور</label>
+                                <div class="password-input">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="أدخل كلمة المرور" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-options">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">تذكرني</label>
+                                </div>
+                                <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                            </div>
+
+                            <button type="submit" class="btn-login-submit">تسجيل الدخول</button>
+
+                            <div class="login-divider">
+                                <span>أو</span>
+                            </div>
+
+                            <div class="social-login">
+                                <button type="button" class="btn-social">
+                                    <i class="fab fa-google"></i>
+                                    جوجل
+                                </button>
+                                <button type="button" class="btn-social">
+                                    <i class="fab fa-microsoft"></i>
+                                    مايكروسوفت
+                                </button>
+                            </div>
+
+                            <div class="form-footer">
+                                <p>ليس لديك حساب؟ <a href="#" class="switch-to-new">سجل كعضو جديد</a></p>
+                            </div>
+                        </form>
+
+                        <!-- New Member Registration Form -->
+                        <form class="login-form" id="newMemberForm">
+                            <h2 class="form-title">تسجيل عضو جديد</h2>
+
+                            <div class="form-group">
+                                <label for="fullName">الاسم الكامل</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="أدخل الاسم الكامل"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" placeholder="أدخل البريد الإلكتروني"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="studentId">الرقم الجامعي</label>
+                                <input type="text" class="form-control" id="studentId" placeholder="أدخل الرقم الجامعي"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nationalId">الرقم القومي</label>
+                                <input type="text" class="form-control" id="nationalId" placeholder="أدخل الرقم القومي"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newPassword">كلمة المرور</label>
+                                <div class="password-input">
+                                    <input type="password" class="form-control" id="newPassword"
+                                        placeholder="أنشئ كلمة مرور قوية" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">تأكيد كلمة المرور</label>
+                                <div class="password-input">
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        placeholder="أعد إدخال كلمة المرور" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-options">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="agreeTerms" required>
+                                    <label for="agreeTerms">أوافق على <a href="#">الشروط والأحكام</a></label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-login-submit">إنشاء الحساب</button>
+
+                            <div class="form-footer">
+                                <p>لديك حساب بالفعل؟ <a href="#" class="switch-to-existing">سجل الدخول</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Login Switcher -->
+                    <div class="login-switcher">
+                        <button class="switch-btn active" id="switchExisting">
+                            <i class="fas fa-user-check"></i>
+                            عضو موجود
+                        </button>
+                        <button class="switch-btn" id="switchNew">
+                            <i class="fas fa-user-plus"></i>
+                            عضو جديد
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن الكلية</h3>
+                        <p>كلية الآداب جامعة القاهرة، منارة العلم والثقافة منذ عام 1908، تقدم برامج أكاديمية متميزة في
+                            العلوم الإنسانية والاجتماعية.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="vision.html">الرؤية والرسالة</a></li>
+                            <li><a href="departments.html">الأقسام العلمية</a></li>
+                            <li><a href="graduate.html">الدراسات العليا</a></li>
+                            <li><a href="quality.html">الجودة والاعتماد</a></li>
+                            <li><a href="green-office.html">المكتب الأخضر</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>خدمات الطلاب</h3>
+                        <ul>
+                            <li><a href="schedules.html">الجداول الدراسية</a></li>
+                            <li><a href="results.html">نتائج الامتحانات</a></li>
+                            <li><a href="youth.html">رعاية الشباب</a></li>
+                            <li><a href="digital-library.html">المكتبة الرقمية</a></li>
+                            <li><a href="email.html">البريد الإلكتروني</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> شارع الجامعة، الجيزة، مصر</li>
+                            <li><i class="fas fa-phone"></i> +20 2 3567 6000</li>
+                            <li><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</li>
+                            <li><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 17:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 كلية الآداب - جامعة القاهرة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Form Switching Logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const existingMemberForm = document.getElementById('existingMemberForm');
+            const newMemberForm = document.getElementById('newMemberForm');
+            const switchExisting = document.getElementById('switchExisting');
+            const switchNew = document.getElementById('switchNew');
+            const switchToNewLinks = document.querySelectorAll('.switch-to-new');
+            const switchToExistingLinks = document.querySelectorAll('.switch-to-existing');
+
+            // Switch to existing member form
+            function showExistingForm() {
+                existingMemberForm.classList.add('active');
+                newMemberForm.classList.remove('active');
+                switchExisting.classList.add('active');
+                switchNew.classList.remove('active');
+            }
+
+            // Switch to new member form
+            function showNewForm() {
+                newMemberForm.classList.add('active');
+                existingMemberForm.classList.remove('active');
+                switchNew.classList.add('active');
+                switchExisting.classList.remove('active');
+            }
+
+            // Event listeners for switcher buttons
+            switchExisting.addEventListener('click', showExistingForm);
+            switchNew.addEventListener('click', showNewForm);
+
+            // Event listeners for form links
+            switchToNewLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showNewForm();
+                });
+            });
+
+            switchToExistingLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showExistingForm();
+                });
+            });
+
+            // Toggle password visibility
+            const toggleButtons = document.querySelectorAll('.toggle-password');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const input = this.previousElementSibling;
+                    const icon = this.querySelector('i');
+
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else {
+                        input.type = 'password';
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                });
+            });
+
+            // Form submission
+            existingMemberForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('تم تسجيل الدخول بنجاح!');
+                // Here you would typically handle the login logic
+            });
+
+            newMemberForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('تم إنشاء الحساب بنجاح! سيتم تحويلك إلى صفحة الدخول.');
+                // Here you would typically handle the registration logic
+            });
+        });
+    </script>
+</body>
+
+</html>

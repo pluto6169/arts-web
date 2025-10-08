@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توصيف المقررات - كلية الآداب - جامعة القاهرة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <!-- نفس الهيدر السابق مع تعديل الروابط -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20 2 3567 6000</span>
+                        <span><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</span>
+                    </div>
+                    <div class="header-links">
+                        <a href="#" class="btn-login"><i class="fas fa-user"></i> تسجيل الدخول</a>
+                        <button class="lang-switch">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="كلية الآداب">
+                        <div class="logo-text">
+                            <h1>كلية الآداب</h1>
+                            <p>جامعة القاهرة</p>
+                        </div>
+                    </div>
+
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li class="dropdown">
+                                <a href="#">عن الكلية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="pages/vision.html">الرؤية والرسالة</a></li>
+                                    <li><a href="pages/management.html">إدارة الكلية</a></li>
+                                    <li><a href="pages/quality.html">الجودة والاعتماد</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="active">الأقسام العلمية <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="departments.html">جميع الأقسام</a></li>
+                                    <li><a href="staff.html">أعضاء هيئة التدريس</a></li>
+                                    <li><a href="courses.html">توصيف المقررات</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages/graduate.html">الدراسات العليا</a></li>
+                            <li class="dropdown">
+                                <a href="#">الطلاب <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">الجداول الدراسية</a></li>
+                                    <li><a href="#">نتائج الامتحانات</a></li>
+                                    <li><a href="pages/youth.html">رعاية الشباب</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pages/community.html">خدمة المجتمع</a></li>
+                            <li><a href="pages/news.html">الأخبار</a></li>
+                            <li><a href="pages/contact.html">اتصل بنا</a></li>
+                        </ul>
+                        <button class="mobile-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>توصيف المقررات</h1>
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span>/</span>
+                    <a href="departments.html">الأقسام العلمية</a>
+                    <span>/</span>
+                    <span>توصيف المقررات</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>توصيف المقررات الدراسية</h2>
+                <p>استعرض المقررات الدراسية لجميع الأقسام العلمية بالكلية</p>
+            </div>
+
+            <!-- Department Filter -->
+            <div class="department-filter">
+                <div class="filter-header">
+                    <h3>اختر القسم العلمي</h3>
+                </div>
+                <div class="filter-options">
+                    <select id="departmentSelect" class="department-select">
+                        <option value="">جميع الأقسام</option>
+                        <option value="arabic">قسم اللغة العربية</option>
+                        <option value="english">قسم اللغة الإنجليزية</option>
+                        <option value="french">قسم اللغة الفرنسية</option>
+                        <option value="history">قسم التاريخ</option>
+                        <option value="geography">قسم الجغرافيا</option>
+                        <option value="philosophy">قسم الفلسفة</option>
+                        <option value="psychology">قسم علم النفس</option>
+                        <option value="sociology">قسم علم الاجتماع</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-grid">
+                <!-- قسم اللغة العربية -->
+                <div class="course-card" data-department="arabic">
+                    <div class="course-header">
+                        <h3>النحو العربي</h3>
+                        <span class="course-code">ARAB 101</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-meta">
+                            <span><i class="fas fa-book"></i> 3 ساعات معتمدة</span>
+                            <span><i class="fas fa-clock"></i> الفصل الأول</span>
+                            <span><i class="fas fa-star"></i> إجباري</span>
+                        </div>
+                        <p class="course-description">
+                            دراسة القواعد النحوية الأساسية وتحليل الجملة العربية، مع التركيز على الإعراب والبناء.
+                        </p>
+                        <div class="course-objectives">
+                            <h4>أهداف المقرر:</h4>
+                            <ul>
+                                <li>فهم القواعد النحوية الأساسية</li>
+                                <li>القدرة على تحليل الجملة العربية</li>
+                                <li>إتقان قواعد الإعراب والبناء</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn-secondary">تحميل التوصيف الكامل</a>
+                    </div>
+                </div>
+
+                <div class="course-card" data-department="arabic">
+                    <div class="course-header">
+                        <h3>الأدب الجاهلي</h3>
+                        <span class="course-code">ARAB 102</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-meta">
+                            <span><i class="fas fa-book"></i> 3 ساعات معتمدة</span>
+                            <span><i class="fas fa-clock"></i> الفصل الثاني</span>
+                            <span><i class="fas fa-star"></i> إجباري</span>
+                        </div>
+                        <p class="course-description">
+                            دراسة الشعر والنثر في العصر الجاهلي، مع التركيز على المعلقات وأشهر الشعراء.
+                        </p>
+                        <div class="course-objectives">
+                            <h4>أهداف المقرر:</h4>
+                            <ul>
+                                <li>دراسة الشعر الجاهلي وأنواعه</li>
+                                <li>تحليل المعلقات السبع</li>
+                                <li>دراسة خصائص النثر الجاهلي</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn-secondary">تحميل التوصيف الكامل</a>
+                    </div>
+                </div>
+
+                <!-- قسم اللغة الإنجليزية -->
+                <div class="course-card" data-department="english">
+                    <div class="course-header">
+                        <h3>English Grammar</h3>
+                        <span class="course-code">ENG 101</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-meta">
+                            <span><i class="fas fa-book"></i> 3 ساعات معتمدة</span>
+                            <span><i class="fas fa-clock"></i> الفصل الأول</span>
+                            <span><i class="fas fa-star"></i> إجباري</span>
+                        </div>
+                        <p class="course-description">
+                            Comprehensive study of English grammar, sentence structure, and writing skills.
+                        </p>
+                        <div class="course-objectives">
+                            <h4>Course Objectives:</h4>
+                            <ul>
+                                <li>Master English grammar rules</li>
+                                <li>Improve writing skills</li>
+                                <li>Develop sentence structure analysis</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Download Full Description</a>
+                    </div>
+                </div>
+
+                <!-- قسم التاريخ -->
+                <div class="course-card" data-department="history">
+                    <div class="course-header">
+                        <h3>التاريخ الإسلامي</h3>
+                        <span class="course-code">HIST 101</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-meta">
+                            <span><i class="fas fa-book"></i> 3 ساعات معتمدة</span>
+                            <span><i class="fas fa-clock"></i> الفصل الأول</span>
+                            <span><i class="fas fa-star"></i> إجباري</span>
+                        </div>
+                        <p class="course-description">
+                            دراسة التاريخ الإسلامي من البعثة النبوية حتى نهاية الدولة العباسية.
+                        </p>
+                        <div class="course-objectives">
+                            <h4>أهداف المقرر:</h4>
+                            <ul>
+                                <li>دراسة عصر النبوة والخلفاء الراشدين</li>
+                                <li>تحليل الدولة الأموية والعباسية</li>
+                                <li>دراسة الحضارة الإسلامية</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn-secondary">تحميل التوصيف الكامل</a>
+                    </div>
+                </div>
+
+                <!-- قسم الجغرافيا -->
+                <div class="course-card" data-department="geography">
+                    <div class="course-header">
+                        <h3>الجغرافيا البشرية</h3>
+                        <span class="course-code">GEOG 101</span>
+                    </div>
+                    <div class="course-info">
+                        <div class="course-meta">
+                            <span><i class="fas fa-book"></i> 3 ساعات معتمدة</span>
+                            <span><i class="fas fa-clock"></i> الفصل الأول</span>
+                            <span><i class="fas fa-star"></i> إجباري</span>
+                        </div>
+                        <p class="course-description">
+                            دراسة العلاقة بين الإنسان والبيئة، والتوزيع السكاني، والأنشطة الاقتصادية.
+                        </p>
+                        <div class="course-objectives">
+                            <h4>أهداف المقرر:</h4>
+                            <ul>
+                                <li>فعل العلاقة بين الإنسان والبيئة</li>
+                                <li>دراسة التوزيع السكاني</li>
+                                <li>تحليل الأنشطة الاقتصادية</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn-secondary">تحميل التوصيف الكامل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-btn disabled"><i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن الكلية</h3>
+                        <p>كلية الآداب جامعة القاهرة، منارة العلم والثقافة منذ عام 1908، تقدم برامج أكاديمية متميزة في
+                            العلوم الإنسانية والاجتماعية.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="pages/vision.html">الرؤية والرسالة</a></li>
+                            <li><a href="pages/departments.html">الأقسام العلمية</a></li>
+                            <li><a href="pages/graduate.html">الدراسات العليا</a></li>
+                            <li><a href="pages/quality.html">الجودة والاعتماد</a></li>
+                            <li><a href="pages/green-office.html">المكتب الأخضر</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>خدمات الطلاب</h3>
+                        <ul>
+                            <li><a href="#">الجداول الدراسية</a></li>
+                            <li><a href="#">نتائج الامتحانات</a></li>
+                            <li><a href="pages/youth.html">رعاية الشباب</a></li>
+                            <li><a href="#">المكتبة الرقمية</a></li>
+                            <li><a href="#">البريد الإلكتروني</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>تواصل معنا</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> شارع الجامعة، الجيزة، مصر</li>
+                            <li><i class="fas fa-phone"></i> +20 2 3567 6000</li>
+                            <li><i class="fas fa-envelope"></i> info@arts.cu.edu.eg</li>
+                            <li><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 17:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 كلية الآداب - جامعة القاهرة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+
+</html>
